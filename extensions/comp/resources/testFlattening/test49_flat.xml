@@ -2,17 +2,17 @@
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
   <model>
     <listOfCompartments>
-      <compartment id="C" size="1" constant="true"/>
       <compartment id="sub1__C" size="1" constant="true"/>
+      <compartment id="C" size="1" constant="true"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species id="s1" compartment="C" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
       <species id="sub1__s1" compartment="sub1__C" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="s1" compartment="C" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
     </listOfSpecies>
     <listOfParameters>
+      <parameter id="sub1__p80" constant="false"/>
       <parameter id="extentconv" value="1000" constant="true"/>
       <parameter id="timeconv" value="60" constant="true"/>
-      <parameter id="sub1__p80" constant="false"/>
     </listOfParameters>
     <listOfRules>
       <assignmentRule variable="sub1__p80">

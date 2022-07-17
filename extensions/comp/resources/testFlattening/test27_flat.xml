@@ -2,18 +2,18 @@
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
   <model>
     <listOfParameters>
-      <parameter id="timeconv" value="60" constant="true"/>
-      <parameter id="sub1__timeconv" value="60" constant="true"/>
-      <parameter id="sub1__timeconv_times_timeconv" constant="true"/>
+      <parameter id="timeconv_times_sub1__timeconv" constant="true"/>
       <parameter id="sub1__sub1__t1" constant="false"/>
+      <parameter id="sub1__timeconv" value="60" constant="true"/>
+      <parameter id="timeconv" value="60" constant="true"/>
     </listOfParameters>
     <listOfInitialAssignments>
-      <initialAssignment symbol="sub1__timeconv_times_timeconv">
+      <initialAssignment symbol="timeconv_times_sub1__timeconv">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <times/>
-            <ci> sub1__timeconv </ci>
             <ci> timeconv </ci>
+            <ci> sub1__timeconv </ci>
           </apply>
         </math>
       </initialAssignment>
@@ -26,7 +26,7 @@
             <apply>
               <divide/>
               <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
-              <ci> sub1__timeconv_times_timeconv </ci>
+              <ci> timeconv_times_sub1__timeconv </ci>
             </apply>
             <cn type="integer"> 3 </cn>
           </apply>

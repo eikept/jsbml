@@ -2,8 +2,8 @@
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
   <model>
     <listOfCompartments>
-      <compartment id="C" size="1" constant="true"/>
       <compartment id="sub1__C" size="1" constant="true"/>
+      <compartment id="C" size="1" constant="true"/>
     </listOfCompartments>
     <listOfSpecies>
       <species id="s8" compartment="C" initialAmount="8" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>

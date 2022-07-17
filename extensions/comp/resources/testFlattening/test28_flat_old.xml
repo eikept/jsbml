@@ -8,24 +8,24 @@
       <species id="sub1__sub1__sub1__s1" compartment="sub1__sub1__sub1__C" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
     </listOfSpecies>
     <listOfParameters>
-      <parameter id="timeconv" value="60" constant="true"/>
-      <parameter id="extentconv" value="10" constant="true"/>
-      <parameter id="sub1__timeconv" value="60" constant="true"/>
-      <parameter id="sub1__extentconv" value="10" constant="true"/>
-      <parameter id="sub1__timeconv_times_timeconv" constant="true"/>
-      <parameter id="sub1__extentconv_times_extentconv" constant="true"/>
+      <parameter id="timeconv_times_sub1__timeconv_times_sub1__sub1__timeconv" constant="true"/>
+      <parameter id="extentconv_times_sub1__extentconv_times_sub1__sub1__extentconv" constant="true"/>
+      <parameter id="timeconv_times_sub1__timeconv" constant="true"/>
+      <parameter id="extentconv_times_sub1__extentconv" constant="true"/>
       <parameter id="sub1__sub1__timeconv" value="60" constant="true"/>
       <parameter id="sub1__sub1__extentconv" value="10" constant="true"/>
-      <parameter id="sub1__sub1__timeconv_times_sub1__timeconv_times_timeconv" constant="true"/>
-      <parameter id="sub1__sub1__extentconv_times_sub1__extentconv_times_extentconv" constant="true"/>
+      <parameter id="sub1__timeconv" value="60" constant="true"/>
+      <parameter id="sub1__extentconv" value="10" constant="true"/>
+      <parameter id="timeconv" value="60" constant="true"/>
+      <parameter id="extentconv" value="10" constant="true"/>
     </listOfParameters>
     <listOfInitialAssignments>
       <initialAssignment symbol="sub1__timeconv_times_timeconv">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <times/>
-            <ci> sub1__timeconv </ci>
             <ci> timeconv </ci>
+            <ci> sub1__timeconv </ci>
           </apply>
         </math>
       </initialAssignment>

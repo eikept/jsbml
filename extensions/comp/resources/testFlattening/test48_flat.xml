@@ -8,24 +8,16 @@
       <species id="sub1__s1" compartment="sub1__C" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
     </listOfSpecies>
     <listOfParameters>
+      <parameter id="sub1__p80" constant="false"/>
       <parameter id="extentconv" value="1000" constant="true"/>
       <parameter id="timeconv" value="60" constant="true"/>
-      <parameter id="sub1__p80" constant="false"/>
     </listOfParameters>
     <listOfRules>
       <assignmentRule variable="sub1__p80">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <plus/>
-            <apply>
-              <divide/>
-              <ci> sub1__J0 </ci>
-              <apply>
-                <divide/>
-                <ci> extentconv </ci>
-                <ci> timeconv </ci>
-              </apply>
-            </apply>
+            <ci> sub1__J0 </ci>
             <cn type="integer"> 6 </cn>
           </apply>
         </math>

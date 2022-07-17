@@ -2,10 +2,10 @@
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
   <model>
     <listOfCompartments>
-      <compartment id="C" size="1" constant="true"/>
+      <compartment id="sub1__C" size="1" constant="true"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species id="s1" compartment="C" initialAmount="0.001" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="sub__s1" compartment="sub1__C" initialAmount="0.001" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
     </listOfSpecies>
     <listOfParameters>
       <parameter id="timeconv" value="60" constant="true"/>
@@ -54,15 +54,15 @@
       </rateRule>
       <assignmentRule variable="t3">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/delay"> delay </csymbol>
-            <ci> t1 </ci>
             <apply>
-              <times/>
-              <ci> timeconv </ci>
-              <cn type="integer"> 3 </cn>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/delay"> delay </csymbol>
+              <ci> t1 </ci>
+              <apply>
+                <times/>
+                <cn type="integer"> 3 </cn>
+                <ci> timeconv </ci>
+              </apply>
             </apply>
-          </apply>
         </math>
       </assignmentRule>
       <algebraicRule>
@@ -75,7 +75,6 @@
               <ci> t3 </ci>
               <apply>
                 <times/>
-                <ci> timeconv </ci>
                 <apply>
                   <divide/>
                   <apply>
@@ -85,6 +84,7 @@
                   </apply>
                   <cn type="integer"> 2 </cn>
                 </apply>
+                <ci> timeconv </ci>
               </apply>
             </apply>
           </apply>
@@ -113,17 +113,12 @@
     <listOfReactions>
       <reaction id="sub1__J0" reversible="true" fast="false">
         <listOfProducts>
-          <speciesReference species="s1" constant="true"/>
+          <speciesReference species="sub1__s1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <apply>
-                <divide/>
-                <cn type="integer"> 1 </cn>
-                <ci> timeconv </ci>
-              </apply>
               <apply>
                 <divide/>
                 <apply>
@@ -137,17 +132,22 @@
                 </apply>
                 <apply>
                   <times/>
-                  <ci> s1 </ci>
+                  <ci> sub1__s1 </ci>
                   <apply>
                     <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/delay"> delay </csymbol>
                     <ci> t5 </ci>
                     <apply>
                       <times/>
+                      <cn type="e-notation">2 <sep/> -1 </cn>
                       <ci> timeconv </ci>
-                      <cn type="e-notation"> 2 <sep/> -1 </cn>
                     </apply>
                   </apply>
                 </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <ci> timeconv </ci>
               </apply>
             </apply>
           </math>
@@ -173,7 +173,6 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> timeconv </ci>
               <apply>
                 <divide/>
                 <cn type="integer"> 1 </cn>
@@ -183,6 +182,7 @@
                   <ci> timeconv </ci>
                 </apply>
               </apply>
+              <ci> timeconv </ci>
             </apply>
           </math>
         </delay>

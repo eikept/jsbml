@@ -19,7 +19,6 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> extentconv </ci>
               <apply>
                 <divide/>
                 <apply>
@@ -33,6 +32,7 @@
                   <cn type="e-notation"> 2 <sep/> 4 </cn>
                 </apply>
               </apply>
+              <ci> extentconv </ci>
             </apply>
           </math>
         </kineticLaw>

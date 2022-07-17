@@ -9,9 +9,9 @@
       <assignmentRule variable="p8">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
-            <times/>
-            <cn type="integer"> 80 </cn>
-            <ci> conv </ci>
+              <times/>
+              <cn type="integer"> 80 </cn>
+              <ci> conv </ci>
           </apply>
         </math>
       </assignmentRule>

@@ -2,7 +2,7 @@
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
   <model>
     <listOfParameters>
-      <parameter id="p2" value="8" constant="false"/>
+      <parameter id="sub2__sub1__p8" value="8" constant="false"/>
     </listOfParameters>
   </model>
 </sbml>

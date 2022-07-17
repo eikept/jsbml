@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model extentUnits="mole" id="aggregate" timeUnits="second">
+    <listOfUnitDefinitions>
+      <unitDefinition id="submod1__milligram">
+        <listOfUnits>
+          <unit exponent="1" kind="gram" multiplier="1" scale="-3"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="foot">
+        <listOfUnits>
+          <unit exponent="1" kind="metre" multiplier="0.3048" scale="0"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="gallon">
+        <listOfUnits>
+          <unit exponent="1" kind="litre" multiplier="3.78541" scale="0"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment constant="true" id="submod1__c" size="1" spatialDimensions="3" units="gallon"/>
+      <compartment constant="true" id="c" size="1" spatialDimensions="3" units="litre"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species boundaryCondition="false" compartment="submod1__c" constant="false" hasOnlySubstanceUnits="true" id="submod1__S1" initialAmount="1" substanceUnits="mole"/>
+      <species boundaryCondition="false" compartment="c" constant="false" hasOnlySubstanceUnits="true" id="S" initialAmount="1" substanceUnits="submod1__milligram"/>
+      <species boundaryCondition="false" compartment="c" constant="false" hasOnlySubstanceUnits="true" id="S1" initialAmount="1" substanceUnits="submod1__milligram"/>
+    </listOfSpecies>
+    <listOfInitialAssignments>
+      <initialAssignment symbol="S1_stoich">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <cn type="integer"> 3 </cn>
+            <cn type="integer"> 2 </cn>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfReactions>
+      <reaction fast="false" id="submod1__R1" reversible="false">
+        <listOfReactants>
+          <speciesReference constant="false" id="submod1__S1_stoich" metaid="submod1____S1" species="submod1__S1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <ci> submod1__S1 </ci>
+              <ci> submod1__k </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="submod1__k" units="foot" value="0.1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction fast="false" id="R1" reversible="false">
+        <listOfReactants>
+          <speciesReference constant="false" id="S1_stoich" metaid="__S1" species="submod1__S1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" species="S"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <ci> S </ci>
+              <ci> k </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" units="second" value="0.1"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

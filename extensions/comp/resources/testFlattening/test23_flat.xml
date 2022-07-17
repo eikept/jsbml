@@ -60,8 +60,8 @@
             <ci> t1 </ci>
             <apply>
               <times/>
-              <ci> timeconv </ci>
               <cn type="integer"> 3 </cn>
+              <ci> timeconv </ci>
             </apply>
           </apply>
         </math>
@@ -76,12 +76,12 @@
               <ci> t3 </ci>
               <apply>
                 <times/>
-                <ci> timeconv </ci>
                 <apply>
                   <divide/>
                   <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
                   <ci> timeconv </ci>
                 </apply>
+                <ci> timeconv </ci>
               </apply>
             </apply>
           </apply>
@@ -118,11 +118,6 @@
               <times/>
               <apply>
                 <divide/>
-                <ci> extentconv </ci>
-                <ci> timeconv </ci>
-              </apply>
-              <apply>
-                <divide/>
                 <apply>
                   <times/>
                   <ci> sub1__s1 </ci>
@@ -138,10 +133,15 @@
                   <ci> t5 </ci>
                   <apply>
                     <times/>
-                    <ci> timeconv </ci>
                     <cn type="e-notation"> 2 <sep/> 4 </cn>
+                    <ci> timeconv </ci>
                   </apply>
                 </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> extentconv </ci>
+                <ci> timeconv </ci>
               </apply>
             </apply>
           </math>
@@ -167,7 +167,6 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> timeconv </ci>
               <apply>
                 <divide/>
                 <cn type="integer"> 1 </cn>
@@ -177,6 +176,7 @@
                   <ci> timeconv </ci>
                 </apply>
               </apply>
+              <ci> timeconv </ci>
             </apply>
           </math>
         </delay>

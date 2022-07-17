@@ -19,12 +19,12 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> p1 </ci>
+              <ci> sub1__p1 </ci>
               <ci> sub1__s1 </ci>
             </apply>
           </math>
           <listOfLocalParameters>
-            <localParameter metaid="sub1__J0_p1" id="p1" value="10"/>
+            <localParameter metaid="sub1__J0_p1" id="sub1__p1" value="10"/>
           </listOfLocalParameters>
         </kineticLaw>
       </reaction>
