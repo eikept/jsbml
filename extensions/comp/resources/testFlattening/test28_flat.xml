@@ -20,7 +20,33 @@
       <parameter id="extentconv" value="10" constant="true"/>
     </listOfParameters>
     <listOfInitialAssignments>
-      <initialAssignment symbol="sub1__timeconv_times_timeconv">
+      <initialAssignment symbol="timeconv_times_sub1__timeconv_times_sub1__sub1__timeconv">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <times/>
+              <ci> timeconv </ci>
+              <ci> sub1__timeconv </ci>
+            </apply>
+            <ci> sub1__sub1__timeconv </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="extentconv_times_sub1__extentconv_times_sub1__sub1__extentconv">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <times/>
+              <ci> extentconv </ci>
+              <ci> sub1__extentconv </ci>
+            </apply>
+            <ci> sub1__sub1__extentconv </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="timeconv_times_sub1__timeconv">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <times/>
@@ -29,30 +55,12 @@
           </apply>
         </math>
       </initialAssignment>
-      <initialAssignment symbol="sub1__extentconv_times_extentconv">
+      <initialAssignment symbol="extentconv_times_sub1__extentconv">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <times/>
-            <ci> sub1__extentconv </ci>
             <ci> extentconv </ci>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="sub1__sub1__timeconv_times_sub1__timeconv_times_timeconv">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> sub1__sub1__timeconv </ci>
-            <ci> sub1__timeconv_times_timeconv </ci>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="sub1__sub1__extentconv_times_sub1__extentconv_times_extentconv">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> sub1__sub1__extentconv </ci>
-            <ci> sub1__extentconv_times_extentconv </ci>
+            <ci> sub1__extentconv </ci>
           </apply>
         </math>
       </initialAssignment>
@@ -68,18 +76,13 @@
               <times/>
               <apply>
                 <divide/>
-                <ci> sub1__sub1__extentconv_times_sub1__extentconv_times_extentconv </ci>
-                <ci> sub1__sub1__timeconv_times_sub1__timeconv_times_timeconv </ci>
-              </apply>
-              <apply>
-                <divide/>
                 <apply>
                   <times/>
                   <ci> sub1__sub1__sub1__s1 </ci>
                   <apply>
                     <divide/>
                     <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
-                    <ci> sub1__sub1__timeconv_times_sub1__timeconv_times_timeconv </ci>
+                    <ci> timeconv_times_sub1__timeconv_times_sub1__sub1__timeconv </ci>
                   </apply>
                 </apply>
                 <apply>
@@ -87,10 +90,15 @@
                   <ci> sub1__sub1__sub1__s1 </ci>
                   <apply>
                     <times/>
-                    <ci> sub1__sub1__timeconv_times_sub1__timeconv_times_timeconv </ci>
-                    <cn type="e-notation"> 2 <sep/> 4 </cn>
+                    <cn type="e-notation">2 <sep/> 4 </cn>
+                    <ci> timeconv_times_sub1__timeconv_times_sub1__sub1__timeconv </ci>
                   </apply>
                 </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> extentconv_times_sub1__extentconv_times_sub1__sub1__extentconv </ci>
+                <ci> timeconv_times_sub1__timeconv_times_sub1__sub1__timeconv </ci>
               </apply>
             </apply>
           </math>
