@@ -334,7 +334,7 @@ public class CompFlattenTest {
    */
   @Test
   public void testSpecificFile() {
-    int i = 2;
+    int i = 64;
     ClassLoader cl = this.getClass().getClassLoader();
     URL urlFile = cl.getResource("testFlattening/" + "test" + i + ".xml");
     URL urlExpected =

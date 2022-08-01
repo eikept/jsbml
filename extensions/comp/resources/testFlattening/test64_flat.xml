@@ -58,7 +58,7 @@
       </reaction>
       <reaction fast="false" id="R1" reversible="false">
         <listOfReactants>
-          <speciesReference constant="false" id="S1_stoich" metaid="__S1" species="submod1__S1"/>
+          <speciesReference constant="false" id="S1_stoich" species="submod1__S1"/>
         </listOfReactants>
         <listOfProducts>
           <speciesReference constant="true" species="S"/>

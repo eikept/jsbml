@@ -28,8 +28,8 @@
       </reaction>
       <reaction id="J2" reversible="true" fast="false">
         <listOfProducts>
-          <speciesReference id="z_stoich2" species="z" stoichiometry="1" constant="true"/>
           <speciesReference constant="true" id="z_stoich" species="A__x" stoichiometry="1"/>
+          <speciesReference id="z_stoich2" species="z" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
     </listOfReactions>
